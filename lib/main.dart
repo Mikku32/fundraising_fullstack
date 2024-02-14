@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fundraising_fullstack/app_theme.dart';
 import 'package:fundraising_fullstack/auth/cubit/auth_cubit.dart';
 import 'package:fundraising_fullstack/auth/views/login.dart';
 import 'package:fundraising_fullstack/home/views/home_page.dart';
@@ -22,8 +23,16 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(providers: [
-      BlocProvider(create: (context) => AuthCubit()),
-    ], child: MaterialApp(debugShowCheckedModeBanner: false, home: HomePage()));
+    return MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (context) => AuthCubit()),
+        ],
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: HomePage(),
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
+          themeMode: ThemeMode.dark,
+        ));
   }
 }
