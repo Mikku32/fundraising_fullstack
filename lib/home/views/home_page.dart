@@ -30,7 +30,8 @@ class HomePage extends StatelessWidget {
                   child: TextField(
                       controller: _searchcontroller,
                       style: const TextStyle(color: Colors.black),
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
+                        fillColor: Theme.of(context).colorScheme.background,
                         border: InputBorder.none,
                         prefixIcon: Icon(Icons.search),
                         hintText: "Find fundraisers, projects, and more",
@@ -43,7 +44,7 @@ class HomePage extends StatelessWidget {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
-                      color: Theme.of(context).colorScheme.secondary),
+                      color: Theme.of(context).colorScheme.surfaceTint),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         vertical: 11, horizontal: 18),
@@ -58,7 +59,9 @@ class HomePage extends StatelessWidget {
                               padding: const EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(18),
-                                  color: Theme.of(context).colorScheme.surface),
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onTertiaryContainer),
                               child: const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
@@ -74,8 +77,70 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 25,
                 ),
-                Container(
-                    height: 150, color: Theme.of(context).colorScheme.surface)
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            height: 70,
+                            width: 70,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onPrimaryContainer),
+                            child: Icon(
+                              Icons.medical_information_outlined,
+                              color: Theme.of(context).colorScheme.onSecondary,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text('Medical')
+                        ],
+                      ),
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onPrimaryContainer),
+                        child: Icon(
+                          Icons.cast_for_education_rounded,
+                          color: Theme.of(context).colorScheme.onSecondary,
+                        ),
+                      ),
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onPrimaryContainer),
+                        child: Icon(
+                          Icons.dangerous_rounded,
+                          color: Theme.of(context).colorScheme.onSecondary,
+                        ),
+                      ),
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onPrimaryContainer),
+                        child: Icon(
+                          Icons.devices_other_rounded,
+                          color: Theme.of(context).colorScheme.onSecondary,
+                        ),
+                      ),
+                    ])
               ]),
             ),
           ),
