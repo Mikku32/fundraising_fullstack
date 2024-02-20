@@ -1,3 +1,7 @@
+// To parse this JSON data, do
+//
+//     final projects = projectsFromJson(jsonString);
+
 import 'dart:convert';
 
 Projects projectsFromJson(String str) => Projects.fromJson(json.decode(str));
@@ -47,7 +51,7 @@ class Projects {
         updatedAt: DateTime.parse(json["updated_at"]),
         accountNumber: json["account_number"],
         upiId: json["upi_id"],
-        images: json["Images"],
+        images: json["images"],
         category: json["category"],
       );
 
@@ -67,7 +71,7 @@ class Projects {
             "${updatedAt.year.toString().padLeft(4, '0')}-${updatedAt.month.toString().padLeft(2, '0')}-${updatedAt.day.toString().padLeft(2, '0')}",
         "account_number": accountNumber,
         "upi_id": upiId,
-        "Images": images,
+        "images": images,
         "category": category,
       };
 }

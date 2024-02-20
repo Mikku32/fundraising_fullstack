@@ -18,7 +18,7 @@ class HomeCubit extends Cubit<HomeState> {
 
       final List<Projects> projectList = [];
 
-      for (var project in projects.data) {
+      for (final project in projects.data) {
         projectList.add(Projects.fromJson(project));
       }
 
