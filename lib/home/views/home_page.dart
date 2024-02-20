@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fundraising_fullstack/bg_gradient.dart';
-import 'package:fundraising_fullstack/home/models/projectdummy.dart';
+import 'package:fundraising_fullstack/home/models/projects.dart';
 import 'package:fundraising_fullstack/home/widgets/casecard.dart';
 
 import 'package:fundraising_fullstack/home/widgets/category_widget.dart';
@@ -133,10 +133,6 @@ class HomePage extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    for (final project in dummyData)
-                      CaseCard(
-                        project: project,
-                      ),
                   ]),
             ),
           ),

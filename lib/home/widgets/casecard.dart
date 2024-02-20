@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fundraising_fullstack/home/models/projectdummy.dart';
+import 'package:fundraising_fullstack/home/models/projects.dart';
 
 class CaseCard extends StatelessWidget {
   const CaseCard({
@@ -46,11 +46,12 @@ class CaseCard extends StatelessWidget {
                   children: [
                     Text(project.title,
                         style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: Theme.of(context).colorScheme.error)),
-                    SizedBox(
-                      height: 20,
+                    Divider(
+                      color: Colors.black,
+                      thickness: 1.5,
                     ),
                     Text(
                       'Raised so far',
